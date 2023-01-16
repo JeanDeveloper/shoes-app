@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "44469235671",
+    "project_id": "shoes-96476",
+    "storage_bucket": "shoes-96476.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:44469235671:android:a331c98613913352952592",
+        "android_client_info": {
+          "package_name": "com.example.shoes_inventory"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "44469235671-uedemnrc5mu74o3skur1024mu4778st3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB8MOW1KMt8wwQoB0KlwQCot4XxKt8O8wk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "44469235671-uedemnrc5mu74o3skur1024mu4778st3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

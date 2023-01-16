@@ -1,0 +1,1 @@
+export 'package:shoes_inventory/pages/login/login_page.dart';
