@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:shoes_inventory/pages/pages.dart';
+import 'package:shoes_inventory/routes/routes.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -13,9 +13,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       initialRoute: "login",
-      routes: {
-        "login": (context) => const LoginPage(),
-      },
+      routes: routes
     );
   }
 }

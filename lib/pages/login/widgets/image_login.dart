@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class ImageLogin extends StatelessWidget {
 
@@ -9,23 +10,25 @@ class ImageLogin extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
-
     final size = MediaQuery.of(context).size;
 
     return Center(
       child: Container(
 
-        width: size.width * 0.7,
+        width: size.width * .5,
+        height: size.height * .4,
         margin: const EdgeInsets.only(top: 50),
+        // color: Colors.blue,
         child: Column(
           children: [
-            Image(
-              image: const AssetImage('assets/tag-logo.png'), 
-              height: size.height * 0.3 , 
-              width: size.width * 0.7
+            SvgPicture.asset(
+              'assets/login.svg', 
+              fit: BoxFit.cover, 
+              width: size.width * .5,
+              height: size.height * .25, 
             ),
-            SizedBox(height: size.height * .01),         
-            Text(titulo)
+            SizedBox(height: size.height * .02),         
+            Text(titulo, style: const TextStyle(fontWeight: FontWeight.bold))
           ],
         ),
 
