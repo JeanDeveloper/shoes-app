@@ -18,12 +18,11 @@ class LoginPage extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                const ImageLogin(titulo: 'Shoes App'),
+                const ImageLogin( titulo: 'Shoes App' ),
                 FormLogin(),
-                const Text('Development by Jean Carlo Chunga Sandoval', style: TextStyle(fontWeight: FontWeight.w200))
+                const Text( 'Development by Jean Chunga Sandoval', style: TextStyle(fontWeight: FontWeight.w200))
               ],
-
-              ),
+            ),
           ),
         ),
       ),

@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+
+import 'package:shoes_inventory/service/auth_service.dart';
 import 'package:shoes_inventory/pages/login/widgets/widgets.dart';
 
 class FormLogin extends StatefulWidget {
@@ -10,7 +13,7 @@ class FormLogin extends StatefulWidget {
 
 class _FormLoginState extends State<FormLogin> {
 
-  final nameController = TextEditingController();
+
   final emailController = TextEditingController();
   final passController = TextEditingController();
 
@@ -18,8 +21,8 @@ class _FormLoginState extends State<FormLogin> {
   @override
   Widget build(BuildContext context) {
 
+    final authService = Provider.of<AuthService>(context);
     return Container(
-      margin: const EdgeInsets.only(top: 40),
       padding:  const EdgeInsets.symmetric(horizontal: 50),
       child: Column(
         children: [
@@ -28,7 +31,7 @@ class _FormLoginState extends State<FormLogin> {
             hinttext: 'Usuario',
             icon:const  Icon(Icons.email_outlined),
             isPassword: false,
-            keyboradType: TextInputType.name,
+            keyboradType: TextInputType.emailAddress,
             textController: emailController,
           ),
 
@@ -40,12 +43,9 @@ class _FormLoginState extends State<FormLogin> {
             textController: passController,
           ),
 
-          //TODO: Crear Boton
-
           ButtonBlue(
-            onPressed: (){
-              print(emailController.text);
-              print(passController.text);
+            onPressed: () async {
+              await authService.signInWithEmailAndPassword( emailController.text, passController.text );
             },
             text: 'Ingresar',
           ),
@@ -54,4 +54,12 @@ class _FormLoginState extends State<FormLogin> {
       ),
     );
   }
+
+  @override
+  void dispose() {
+    emailController.dispose();
+    passController.dispose();
+    super.dispose();
+  }
+
 }
